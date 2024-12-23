@@ -1,0 +1,114 @@
+/* General Table Styles */
+.movies-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Headers */
+.movies-table th {
+    background: linear-gradient(to bottom, #333, #666);
+    color: #fff; /* White text for contrast */
+    padding: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #444;
+}
+
+/* Table Cells */
+.movies-table td {
+    color: #555; /* Default text color */
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternating Row Colors */
+.movies-table tr:nth-child(even) td {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+    color: #444; /* Slightly darker gray for text */
+}
+
+/* Highlight Specific Columns (IMDb Rating and Rotten Tomatoes) */
+.movies-table td:nth-child(6),
+.movies-table th:nth-child(6) {
+    color: #007bff; /* Blue for IMDb Rating */
+}
+
+.movies-table td:nth-child(7),
+.movies-table th:nth-child(7) {
+    color: #ff6347; /* Tomato color for Rotten Tomatoes */
+}
+
+/* Row Hover Effect */
+.movies-table tr:hover td {
+    background-color: #eaeaea; /* Highlighted row background */
+    color: #000; /* Black text on hover */
+}
+
+/* Filters Panel */
+.filters-panel {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Filter Groups */
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-group label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+select {
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Clear Filters Button */
+.clear-filters {
+    padding: 8px 12px;
+    background-color: #cc0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear-filters:hover {
+    background-color: #9e0000;
+}
+
+/* Optional: Add More Spacing Between Rows */
+.movies-table tr {
+    height: 40px;
+}
+
+/* Optional: Responsive Table for Smaller Screens */
+@media (max-width: 768px) {
+    .movies-table {
+        font-size: 0.9rem;
+    }
+
+    .filters-panel {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
