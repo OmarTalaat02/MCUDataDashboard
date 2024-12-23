@@ -1,0 +1,33 @@
+Movie ID,Title,Release Year,Phase,Box Office (Millions USD),IMDb Rating,Rotten Tomatoes (%),Director(s),Main Characters,Genre,Runtime (Minutes),Budget (Millions USD),Audience Score (%)
+1,Iron Man,2008,1,585.1,7.9,94,Jon Favreau,Tony Stark (Iron Man),"Action, Adventure, Sci-Fi",126,140,91
+2,The Incredible Hulk,2008,1,263.4,6.7,67,Louis Leterrier,Bruce Banner (Hulk),"Action, Adventure, Sci-Fi",112,150,70
+3,Iron Man 2,2010,1,623.9,7,72,Jon Favreau,"Tony Stark (Iron Man), James Rhodes (War Machine)","Action, Adventure, Sci-Fi",124,200,72
+4,Thor,2011,1,449.3,7,77,Kenneth Branagh,"Thor, Loki","Action, Adventure, Sci-Fi",115,150,76
+5,Captain America: The First Avenger,2011,1,370.6,6.9,80,Joe Johnston,Steve Rogers (Captain America),"Action, Adventure, Sci-Fi",124,140,79
+6,The Avengers,2012,1,1518.8,8,91,Joss Whedon,"Iron Man, Captain America, Thor, Hulk, Black Widow, Hawkeye","Action, Adventure, Sci-Fi",143,220,92
+7,Iron Man 3,2013,2,1214.8,7.2,79,Shane Black,Tony Stark (Iron Man),"Action, Adventure, Sci-Fi",112,130,71
+8,Thor: The Dark World,2013,2,644.6,6.9,66,Alan Taylor,"Thor, Loki, Jane Foster","Action, Adventure, Sci-Fi",136,170,82
+9,Captain America: The Winter Soldier,2014,2,714.4,7.7,90,Anthony & Joe Russo,"Captain America, Black Widow, Winter Soldier","Action, Adventure, Sci-Fi",142,170,84
+10,Guardians of the Galaxy,2014,2,773.3,8,92,James Gunn,"Star-Lord, Gamora, Drax, Rocket, Groot","Action, Adventure, Sci-Fi",121,130,77
+11,Avengers: Age of Ultron,2015,2,1402.8,7.3,76,Joss Whedon,"Iron Man, Captain America, Thor, Hulk, Black Widow, Hawkeye, Vision, Scarlet Witch","Action, Adventure, Sci-Fi",112,130,79
+12,Ant-Man,2015,2,519.3,7.3,83,Peyton Reed,Scott Lang (Ant-Man),"Action, Adventure, Sci-Fi",136,170,83
+13,Captain America: Civil War,2016,3,1153.3,7.8,90,Anthony & Joe Russo,"Captain America, Iron Man, Winter Soldier, Black Panther, Spider-Man, Bucky Barnes","Action, Adventure, Sci-Fi",141,180,85
+14,Doctor Strange,2016,3,677.7,7.5,89,Scott Derrickson,Doctor Stephen Strange,"Action, Adventure, Sci-Fi",133,250,80
+15,Guardians of the Galaxy Vol. 2,2017,3,863.8,7.6,85,James Gunn,"Star-Lord, Gamora, Drax, Rocket, Groot, Mantis","Action, Adventure, Sci-Fi",147,250,81
+16,Spider-Man: Homecoming,2017,3,880.2,7.4,92,Jon Watts,Spider-Man,"Action, Adventure, Sci-Fi",134,175,89
+17,Thor: Ragnarok,2017,3,853,7.9,93,Taika Waititi,"Thor, Loki, Hulk","Action, Adventure, Comedy",130,180,87
+18,Black Panther,2018,3,1347.1,7.3,96,Ryan Coogler,"T'Challa, Killmonger, Shuri","Action, Adventure, Sci-Fi",134,200,79
+19,Avengers: Infinity War,2018,3,2048.4,8.4,85,Anthony & Joe Russo,"Iron Man, Thor, Thanos","Action, Adventure, Sci-Fi",149,300,91
+20,Ant-Man and the Wasp,2018,3,622.7,7,87,Peyton Reed,"Ant-Man, Wasp","Action, Adventure, Comedy",118,160,80
+21,Captain Marvel,2019,3,1128.3,6.8,79,"Anna Boden, Ryan Fleck","Captain Marvel, Nick Fury","Action, Adventure, Sci-Fi",123,175,48
+22,Avengers: Endgame,2019,3,2798,8.4,94,Anthony & Joe Russo,"Iron Man, Captain America, Thanos","Action, Adventure, Sci-Fi",181,356,90
+23,Spider-Man: Far From Home,2019,3,1131.9,7.4,90,Jon Watts,"Spider-Man, Mysterio","Action, Adventure, Sci-Fi",129,160,95
+24,Black Widow,2021,4,379.8,6.7,79,Cate Shortland,Natasha Romanoff,"Action, Adventure, Thriller",134,200,91
+25,Shang-Chi and the Legend of the Ten Rings,2021,4,432.2,7.4,91,Destin Daniel Cretton,"Shang-Chi, Wenwu","Action, Adventure, Fantasy",132,150,98
+26,Eternals,2021,4,402.1,6.3,47,Chloé Zhao,"Ikaris, Sersi, Thena","Action, Adventure, Fantasy",156,200,78
+27,Spider-Man: No Way Home,2021,4,1951.3,8.3,93,Jon Watts,"Spider-Man, Doctor Strange","Action, Adventure, Sci-Fi",148,200,98
+28,Doctor Strange in the Multiverse of Madness,2022,4,955.8,7,74,Sam Raimi,"Doctor Strange, Wanda Maximoff","Action, Adventure, Horror",126,200,85
+29,Thor: Love and Thunder,2022,4,760.9,6.3,64,Taika Waititi,"Thor, Jane Foster","Action, Adventure, Comedy",119,250,77
+30,Black Panther: Wakanda Forever,2022,4,859.2,6.8,84,Ryan Coogler,"Shuri, Namor","Action, Adventure, Drama",161,250,94
+31,Guardians of the Galaxy Vol. 3,2023,5,845.6,8.1,82,James Gunn,"Star-Lord, Rocket, Groot","Action, Adventure, Sci-Fi",150,250,97
+32,Deadpool & Wolverine,2024,5,1330,7.7,78,Shawn Levy,"Deadpool, Wolverine","Action, Adventure, Comedy",128,200,97
