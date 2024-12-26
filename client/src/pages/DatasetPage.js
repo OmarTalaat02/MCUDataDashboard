@@ -107,6 +107,8 @@ const DatasetPage = () => {
                     <th>Box Office</th>
                     <th>IMDb Rating</th>
                     <th>Rotten Tomatoes</th>
+                    <th>Director</th>
+                    <th>Main Characters</th>
                     <th>Genre</th>
                     <th>Runtime</th>
                     <th>Budget</th>
@@ -124,6 +126,8 @@ const DatasetPage = () => {
                             <td>{movie.box_office}</td>
                             <td>{movie.imdb_rating}</td>
                             <td>{movie.rotten_tomatoes}</td>
+                            <td>{movie.director}</td>
+                            <td>{movie.main_characters}</td>
                             <td>{movie.genre}</td>
                             <td>{movie.runtime}</td>
                             <td>{movie.budget}</td>
@@ -132,7 +136,7 @@ const DatasetPage = () => {
                     ))
                 ) : (
                     <tr>
-                        <td colSpan="11">No movies found for the selected filters.</td>
+                        <td colSpan="13">No movies found for the selected filters.</td>
                     </tr>
                 )}
                 </tbody>
