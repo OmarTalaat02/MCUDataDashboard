@@ -29,7 +29,7 @@ const LandingPage = () => {
         <div className="landing-section">
             {/* Title and Intro */}
             <Typography variant="h3" gutterBottom>
-                Welcome to the MCU Data Dashboard
+                MCU Data Dashboard
             </Typography>
             <Typography variant="body1" gutterBottom>
                 Explore insights and data from the Marvel Cinematic Universe.

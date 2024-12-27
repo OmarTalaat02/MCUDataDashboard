@@ -13,7 +13,7 @@ import {
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const AudienceScoreChart = () => {
-    // Initialize with default data structure
+    const [sortBy, setSortBy] = useState('phase');
     const [chartData, setChartData] = useState({
         labels: [],
         datasets: [
@@ -35,6 +35,12 @@ const AudienceScoreChart = () => {
                 return;
             }
 
+            if (sortBy === 'phase') {
+                data.sort((a, b) => a.phase - b.phase);
+            } else if (sortBy === 'score') {
+                data.sort((a, b) => b.average_audience_score - a.average_audience_score);
+            }
+
             const phases = data.map((item) => `Phase ${item.phase}`);
             const scores = data.map((item) => item.average_audience_score);
 
@@ -53,20 +59,27 @@ const AudienceScoreChart = () => {
         };
 
         getData();
-    }, []);
+    }, [sortBy]);
 
-    // Render only if chartData has labels
+    const toggleSort = () => {
+        setSortBy((prevSortBy) => (prevSortBy === 'phase' ? 'score' : 'phase'));
+    };
+
     if (chartData.labels.length === 0) {
         return <div>Loading chart...</div>;
     }
 
     return (
-        <div>
+        <div style={{ width: '600px', height: '400px', float: 'left' }}>
             <h2>Average Audience Score by MCU Phase</h2>
+            <button onClick={toggleSort}>
+                Sort by {sortBy === 'phase' ? 'Score' : 'Phase'}
+            </button>
             <Bar
                 data={chartData}
                 options={{
                     responsive: true,
+                    maintainAspectRatio: false,
                     scales: {
                         y: {
                             beginAtZero: true,

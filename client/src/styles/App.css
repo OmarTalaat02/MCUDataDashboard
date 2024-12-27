@@ -27,17 +27,15 @@
   border-radius: 8px;
 }
 
-/* Landing Section Styling */
 .landing-section h3 {
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow to the text */
 }
-
 
 /* Quick Access Panel */
 .quick-access-panel {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
   margin-top: 30px; /* Add space below the body1 message */
   position: relative; /* Prevent overlapping */
@@ -47,12 +45,10 @@
 /* Highlights Section */
 .highlights-section {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
   gap: 20px;
   justify-content: center;
   margin-top: 30px;
-  width: ;
 }
 
 .highlight-box {
@@ -75,20 +71,34 @@
   }
 }
 
+/* Ensure the main container takes the full height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
 
-/* Footer Styling */
+/* Allow the content to expand and push the footer to the bottom */
+.content {
+  flex: 1; /* Take up all available space */
+  display: flex;
+  align-items: flex-start; /* Align items to the start (top) */
+}
+
+/* Chart container styles */
+.chart-container {
+  width: 600px;
+  height: 400px;
+}
+
+/* Footer styles */
 .footer {
   background: linear-gradient(135deg, #2c003e, #5a009d);
   color: #e0e0e0;
   text-align: center;
-  padding: 1px;
-  position: fixed; /* Ensures it's fixed at a specific position */
-  left: 0; /* Aligns to the left edge */
-  right: 0; /* Aligns to the right edge */
-  bottom: 0; /* Sticks to the bottom */
-  z-index: 1000; /* Ensures it appears above other elements if overlapping */
+  padding: 20px;
+  width: 100%;
 }
-
 
 .footer a {
   color: #61dafb;

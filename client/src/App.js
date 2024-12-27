@@ -24,14 +24,18 @@ const App = () => {
 
     return (
         <Router>
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="/dataset" element={<DatasetPage />} />
-                <Route path="/charts" element={<ChartsPage />} />
-                <Route path="/filters" element={<FiltersPage />} />
-            </Routes>
-            <Footer />
+            <div className="app-container">
+                <Navbar />
+                <main className="content">
+                    <Routes>
+                        <Route path="/" element={<LandingPage />} />
+                        <Route path="/dataset" element={<DatasetPage />} />
+                        <Route path="/charts" element={<ChartsPage />} />
+                        <Route path="/filters" element={<FiltersPage />} />
+                    </Routes>
+                </main>
+                <Footer />
+            </div>
         </Router>
     );
 };

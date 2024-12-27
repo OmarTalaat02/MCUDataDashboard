@@ -5,7 +5,7 @@ const ChartsPage = () => {
     return (
         <div>
             <h2>MCU Data Visualizations</h2>
-            <AudienceScoreChart />
+            <AudienceScoreChart sortBy="phase" />
             {/* Additional charts can be added here */}
         </div>
     );
