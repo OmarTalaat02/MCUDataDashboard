@@ -1,12 +1,24 @@
 import React from 'react';
 import AudienceScoreChart from '../AudienceScoreChart';
+import TopGrossingFilmsChart from '../TopGrossingFilmsChart';
+import '../styles/ChartsPage.css';
+import TopBudgetFilmsChart from "../TopBudgetFilmsChart";
 
 const ChartsPage = () => {
     return (
-        <div>
-            <h2>MCU Data Visualizations</h2>
-            <AudienceScoreChart sortBy="phase" />
-            {/* Additional charts can be added here */}
+        <div className="charts-page">
+            <h1>MCU Charts</h1>
+            <div className="chart-container">
+                <div className="chart">
+                    <AudienceScoreChart />
+                </div>
+                <div className="chart">
+                    <TopGrossingFilmsChart />
+                </div>
+                <div className="chart">
+                    <TopBudgetFilmsChart />
+                </div>
+            </div>
         </div>
     );
 };

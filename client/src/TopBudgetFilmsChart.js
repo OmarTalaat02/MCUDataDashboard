@@ -1,7 +1,7 @@
-// client/src/AudienceScoreChart.js
+// client/src/TopBudgetFilmsChart.js
 import React, { useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
-import { fetchAverageAudienceScore } from './api';
+import { fetchMovies } from './api';
 import {
     Chart as ChartJS,
     BarElement,
@@ -13,16 +13,15 @@ import {
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-const AudienceScoreChart = () => {
-    const [sortBy, setSortBy] = useState('phase');
+const TopBudgetFilmsChart = () => {
     const [chartData, setChartData] = useState({
         labels: [],
         datasets: [
             {
-                label: 'Average Audience Score (%)',
+                label: 'Budget (in millions)',
                 data: [],
-                backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                borderColor: 'rgba(255, 99, 132, 1)',
                 borderWidth: 1,
             },
         ],
@@ -30,29 +29,26 @@ const AudienceScoreChart = () => {
 
     useEffect(() => {
         const getData = async () => {
-            const data = await fetchAverageAudienceScore();
+            const data = await fetchMovies();
             if (!data || data.length === 0) {
                 console.error('No data returned from API');
                 return;
             }
 
-            if (sortBy === 'phase') {
-                data.sort((a, b) => a.phase - b.phase);
-            } else if (sortBy === 'score') {
-                data.sort((a, b) => b.average_audience_score - a.average_audience_score);
-            }
+            // Sort by budget and get top 5
+            const topBudgetFilms = data.sort((a, b) => b.budget - a.budget).slice(0, 5);
 
-            const phases = data.map((item) => `Phase ${item.phase}`);
-            const scores = data.map((item) => item.average_audience_score);
+            const titles = topBudgetFilms.map((film) => film.title);
+            const budgetNumbers = topBudgetFilms.map((film) => film.budget);
 
             setChartData({
-                labels: phases,
+                labels: titles,
                 datasets: [
                     {
-                        label: 'Average Audience Score (%)',
-                        data: scores,
-                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
+                        label: 'Budget (in millions)',
+                        data: budgetNumbers,
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
                         borderWidth: 1,
                     },
                 ],
@@ -60,11 +56,7 @@ const AudienceScoreChart = () => {
         };
 
         getData();
-    }, [sortBy]);
-
-    const toggleSort = () => {
-        setSortBy((prevSortBy) => (prevSortBy === 'phase' ? 'score' : 'phase'));
-    };
+    }, []);
 
     if (chartData.labels.length === 0) {
         return <div>Loading chart...</div>;
@@ -72,8 +64,7 @@ const AudienceScoreChart = () => {
 
     return (
         <div className="chart">
-            <h2>Average Audience Score by MCU Phase</h2>
-
+            <h2>Top 5 Highest Budget Films</h2>
             <Bar
                 data={chartData}
                 options={{
@@ -84,17 +75,14 @@ const AudienceScoreChart = () => {
                             beginAtZero: true,
                             title: {
                                 display: true,
-                                text: 'Audience Score (%)',
+                                text: 'Budget (in millions)',
                             },
                         },
                     },
                 }}
             />
-            <button onClick={toggleSort}>
-                Sort by {sortBy === 'phase' ? 'Score' : 'Phase'}
-            </button>
         </div>
     );
 };
 
-export default AudienceScoreChart;
+export default TopBudgetFilmsChart;

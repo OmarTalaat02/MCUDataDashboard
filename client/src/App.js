@@ -8,6 +8,7 @@ import LandingPage from "./pages/LandingPage";
 import DatasetPage from './pages/DatasetPage';
 import ChartsPage from './pages/ChartsPage';
 import FiltersPage from './pages/FiltersPage';
+import TopInsightsPage from './pages/TopInsightsPage';
 
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
                         <Route path="/dataset" element={<DatasetPage />} />
                         <Route path="/charts" element={<ChartsPage />} />
                         <Route path="/filters" element={<FiltersPage />} />
+                        <Route path={"/top-insights"} element={<TopInsightsPage />} />
                     </Routes>
                 </main>
                 <Footer />

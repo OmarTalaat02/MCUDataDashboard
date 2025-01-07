@@ -17,9 +17,6 @@ const Navbar = () => {
                 <Button color="inherit" component={Link} to="/charts">
                     Explore Charts
                 </Button>
-                <Button color="inherit" component={Link} to="/filters">
-                    Apply Filters
-                </Button>
             </Toolbar>
     );
 };

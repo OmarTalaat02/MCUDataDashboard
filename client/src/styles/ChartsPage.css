@@ -1,0 +1,38 @@
+.charts-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align charts at the top */
+    gap: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    width: 100%; /* Ensure the container spans the available width */
+}
+
+.chart {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    height: 500px; /* Set a fixed height */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Ensure text and chart are in a column */
+    justify-content: flex-start; /* Align content at the top */
+    align-items: center;
+    padding: 20px;
+}
+
+.chart h2 {
+    margin-bottom: 10px; /* Add some space below the title */
+}
+
+.chart button {
+    margin-top: 10px; /* Add some space above the button */
+}
